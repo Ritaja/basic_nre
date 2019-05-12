@@ -1,0 +1,11 @@
+.vscode
+data/
+checkpoint/
+results/
+summary/
+vocab.*
+tags.txt
+words.txt
+glove.npz
+*/__pycache__/*
+*.pyc

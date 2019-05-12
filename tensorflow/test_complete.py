@@ -81,6 +81,6 @@ class model(framework.re_model):
         return weights_table
 
 
-
-
-framework_.train(model, model_name="pccnn-att", max_epoch=60, ckpt_dir="checkpoint", gpu_nums=1)
+framework_.train(model, model_name="pccnn-att", max_epoch=60, ckpt_dir=os.path.join(dataset_dir, '/checkpoint'), 
+                 summary_dir=os.path.join(dataset_dir,'/summary'),
+                 test_result_dir=os.path.join(dataset_dir,'/test_result'), gpu_nums=1)

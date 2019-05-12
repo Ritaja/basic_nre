@@ -11,7 +11,8 @@ import os
 import json
 
 
-dataset_dir = os.path.join('./data')
+# read data path from environ, else fallback to default
+dataset_dir = (os.environ.get('DATA_DIR', default='./data'))
 if not os.path.isdir(dataset_dir):
     raise Exception("[ERROR] Dataset dir %s doesn't exist!" % (dataset_dir))
 

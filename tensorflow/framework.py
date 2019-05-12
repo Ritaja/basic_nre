@@ -171,8 +171,8 @@ class re_framework:
         result = sess.run(run_array, feed_dict)
         return result
 
-    def train(self, model, model_name, ckpt_dir='./checkpoint', summary_dir='./summary',
-              test_result_dir='./test_result', learning_rate=0.5, max_epoch=60,
+    def train(self, model, model_name, ckpt_dir, summary_dir,
+              test_result_dir, learning_rate=0.5, max_epoch=60,
               pretrain_model=None, test_epoch=1, optimizer=tf.train.GradientDescentOptimizer,
               gpu_nums=1, not_best_stop=20):
         """
